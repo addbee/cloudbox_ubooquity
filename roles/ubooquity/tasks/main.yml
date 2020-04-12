@@ -28,7 +28,6 @@
     - /opt/ubooquity/files
     - /mnt/remote/Media/Books
     - /mnt/remote/Media/Comics
-
 - name: Create and start ubooquity container
   docker_container:
     name: ubooquity
@@ -46,7 +45,7 @@
       - "/opt/ubooquity/config:/config"
       - "/opt/ubooquity/files:/files"
       - "/mnt/remote/Media/Comics:/comics"
-      - "/mnt/remote/Media/Books:/books"	  
+      - "/mnt/remote/Media/Books:/books"
     labels:
       "com.github.cloudbox.cloudbox_managed": "true"
     networks:
